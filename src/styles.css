@@ -1,0 +1,46 @@
+
+html, body { height: 100%; }
+body {
+  background-color: rgb(172, 236, 204);
+   margin: 0; 
+   font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#map-point-blue {
+    color: blue;
+    position: absolute;
+  }
+  #map-point-green {
+    color: green;
+    position: absolute;
+  }
+  #map-point-red {
+    color: red;
+    position: absolute;
+  }
+  
+  #container-1 {
+    width: 50% !important;
+    height: 75% !important;
+    /* float: right; */
+    margin: 75px;
+  }
+  
+  #container-2 {
+    width: 50% !important;
+    height: 75% !important;
+     /* float: right;  */
+    margin: 75px;
+  }
+  
+  #container-3 {
+    width: 50% !important;
+    height: 75% !important;
+    /* float: right; */
+    margin: 75px;
+  }
+  #container-4 {
+    width: 50% !important;
+    height: 75% !important;
+    margin: 75px;
+    /* float: right; */
+  }

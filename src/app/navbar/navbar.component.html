@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark pink">
+  <a class="navbar-brand" routerLink="/"><strong style="margin-left: 20px;">MAS</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+  </div>
+
+  <ul 
+    *ngIf="authservice.isLogged()"
+  class="nav navbar-nav navbar-right">
+    <li>
+      <div>
+        <strong 
+          *ngIf="authservice.isLogged()"
+        style="margin-right:10px;">{{authservice.currentUser.user.email}}</strong>
+        <img src="https://centrik.in/wp-content/uploads/2017/02/user-image-.png" style="width: 38px; height: 38px; margin-right: 20px;" class="rounded-circle z-depth-0">
+      </div>
+    </li>
+  </ul>
+
+
+  <button *ngIf="!authservice.isLogged()" routerLink="/login" style="margin-right: 10px;" class="btn btn-unique my-2 my-sm-0"
+    type="button">Login <i class="fas fa-sign-in-alt"></i>
+  </button>
+  <button *ngIf="isManager" routerLink="/signup" style="margin-right: 10px;" class="btn btn-unique my-2 my-sm-0"
+    type="button">Register <i class="fas fa-user-plus"></i>
+  </button>
+
+  <button  routerLink="/login" style="margin-right: 10px;" class="btn btn-unique my-2 my-sm-0"
+    type="button" (click)="logout()">LogOut <i class="fas fa-sign-out-alt"></i>
+  </button>
+
+   <!-- <button *ngIf="authservice.isLogged()" routerLink="/intimate" style="margin-right: 10px;" class="btn btn-unique my-2 my-sm-0"
+    type="button" >logOut<i class="fas fa-user-plus"></i>
+  </button>  -->
+
+ 
+    
+</nav>

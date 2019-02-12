@@ -1,0 +1,53 @@
+<!-- <div *ngFor = "let qc of qualityChecker">
+  <div (click) = "clickQC(qc)"> -->
+      <app-nav-bar-manager></app-nav-bar-manager>
+  <div class="container mx-auto mt-4">
+    <div class="form-section">
+    <table style="width:100%">
+    <!-- <div class="table"> -->
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>Email</th>
+        <th>Role</th>
+        <th>Row ID</th>
+        <th>telephoneNo</th>
+        <th>Remove QC</th>
+      </tr>
+
+      <!-- <div >
+        <div > -->
+      <tr *ngFor = "let qc of qualityChecker" >
+        
+        <td  (click) = "clickQC(qc)" >{{qc.firstName}}</td>
+        <td>{{qc.lastName}}</td> 
+        <td>{{qc.email}}</td>
+        <td>{{qc.role}}</td>
+        <td>{{qc.rowId}}</td>
+        <td>{{qc.telephoneNo}}</td>
+       <td> <button (click) = "deleteAlert(qc)"  >Delete</button> </td>
+      </tr>
+    <!-- </div>
+ 
+  </div> -->
+  
+    </table>
+    
+    
+    
+    
+    <!-- <p >{{qc.email}}</p>
+      <p >{{qc.firstName}}</p>
+      <p >{{qc.lastName}}</p>
+      <p >{{qc.telephoneNo}}</p> -->
+  <!-- </div>
+ 
+</div> -->
+
+<!-- <div *ngFor = "let qc of qualityChecker">
+  <div (click) = "clickQC(qc)">
+    {{qc.email}}
+  </div>
+</div> -->
+</div>
+</div>

@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div class="img-center" >
+
+    <div id="pointer_div" (click)="point_it($event)" style="background-repeat: no-repeat; width:500px; height: 350px;"
+    [ngStyle]="{'background-image':'url('+image+')'}">
+    
+    </div>
+    </div>
+<div class="text-center">
+    <input type="radio" (change)= "colorClick($event)" name="options" value="red" />
+    <button type="button" class="btn btn-danger">Stitches and Seems</button>
+    <!-- <span>Red</span> -->
+    <br>
+    <input type="radio" (change)= "colorClick($event)" name="options" value="blue" />
+    <button type="button" class="btn btn-primary btn-rounded">Stain patches(Oil Marks)</button>
+    <!-- <span>Blue</span> -->
+    <br>
+    <input type="radio" (change)= "colorClick($event)" name="options" value="green" />
+    <button type="button" class="btn btn-success btn-rounded">Fabric defects</button>
+    <!-- <span>Green</span> -->
+    </div>
+    
+    <!-- <div class="text-bottom">
+        <button (click) = "saveCoorfinates()" ><button type="button" class="btn btn-elegant">saveCoordinates</button></button>
+        </div> -->
+
+
+
+<button (click) = "saveCoorfinates()"  type="button" class="btn btn-elegant">saveCoordinates</button>

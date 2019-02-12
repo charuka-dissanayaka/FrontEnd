@@ -1,0 +1,74 @@
+
+
+<body  class="inventory-body">
+<div class="container loginContainer">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 loginForm">
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="text-white" style="background-color: rgb(228, 161, 212)">
+
+        <div 
+          *ngIf="logInvalid"
+          class="alert alert-danger">Incorrect username or password</div>
+
+        <img class="mb-4" src="../../assets/brand.png" alt="" width="72" height="72">
+
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label class="sr-only">Email address</label>
+        <input [style] formControlName="email" [value]="" class="form-control" placeholder="Email" type="email"  required email
+        ><br>
+
+        <div *ngIf="email.touched && email.invalid">
+
+            <div *ngIf="email.errors.email">
+                <p style="color:red">Please insert valid email</p>
+              </div>
+          <div *ngIf="email.errors.required">
+            <p style="color:red">Please enter email...!</p>
+          </div>
+          
+        </div>
+
+        <label class="sr-only">Password</label>
+        <input formControlName="password" class="form-control" placeholder="Password" type="password" required minlength="8">
+
+        <div *ngIf="password.touched && password.invalid">
+          <div *ngIf="password.errors.required">
+            <p style="color:red">Password must be included!</p>
+          </div>
+          <div *ngIf="password.errors.minlength">
+            <p style="color:red">Password must be 8 characters!</p>
+          </div>
+        </div>
+
+        <!-- <div class="radio" class="text-white">
+          <label style="margin:10px;" >
+            <input formControlName="role" required type="radio" name="role" value="QC" (click)="toggle1()" (change)="userChange($event)" class="text-white"> Qyality Checker
+          </label>
+          
+          <label style="margin:10px;" >
+            <input formControlName="role" type="radio" name="role" value="Manager1" (click)="toggle2()" (change)="userChange($event)" > Manager
+          </label>
+        </div>
+        <input type="number" ng-model="theValue" placeholder="Raw Id" name="Raw id" min="0" max="100" required [disabled]="textBoxDisabled" /> -->
+        
+        
+
+
+        <br>
+
+        <button [disabled]="form.invalid" class="btn btn-lg btn-pink btn-block" type="submit">Sign in</button>
+       
+      </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+</body>
+<!-- <script>
+  document.getElementById("submitButton").addEventListener("click", myFunction);
+  
+  
+  </script> -->

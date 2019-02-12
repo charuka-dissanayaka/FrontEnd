@@ -1,0 +1,7 @@
+.inventory {
+    position: fixed;
+    min-width: 100%;
+    background-image: url("/assets/abstract.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }

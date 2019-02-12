@@ -1,0 +1,14 @@
+.loginForm{
+    text-align: center;
+}
+
+.loginContainer{
+    margin-top: 3%;
+}
+.inventory-body {
+    position: fixed;
+    min-width: 100%;
+    background-image: url("/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }

@@ -1,0 +1,65 @@
+<!-- in app.component.html -->
+<app-nav-bar-manager></app-nav-bar-manager>
+<div class="md-form">
+        <i class="fas fa-envelope prefix"></i>
+        <input type="text" [(ngModel)] = "reason" class="form-control">
+        <label for="reason">massage</label>
+        <button type="submit" class="btn btn-primary mb-0" (click) = "sendAlert()" >send Alert</button>
+      </div>
+
+
+
+
+
+
+<!-- <label for="reason">Message</label>
+<input type="text" [(ngModel)] = "reason">
+<button type="reset" (click) = "sendAlert()" >Sent Alert</button>
+<button type="submit" class="btn btn-primary mb-0" (click) = "sendAlert()" >send Alert</button> 
+
+    <!-- File: <input type="file" >
+    <button (click)= "onUpload()" >Upload</button> 
+<div> -->
+    <div class="input-default-wrapper mt-3">
+
+            <span class="input-group-text mb-3" id="input1">Upload</span>
+          
+            <input type="file" id="file-with-current" class="input-default-js" name="imageUrl" (change)="onFileChanged($event)">
+            <button type="submit" class="btn btn-primary mb-0" (click)= "onUpload()">Submit</button>
+            <!-- <label class="label-for-default-js rounded-right mb-3" for="file-with-current"><span class="span-choose-file">Choose
+                file</span>
+          
+              <div class="float-right span-browse" >Browse
+              <button type="submit" class="btn btn-primary mb-0" (click)= "onUpload()">Submit</button>
+            </div>
+            </label>
+           -->
+          </div>
+        <!-- Material input -->
+<!-- <div class="md-form">
+        <i class="fas fa-envelope prefix"></i>
+        <input type="text" id="inputIconEx1" class="form-control">
+        <label for="inputIconEx1">E-mail address</label>
+      </div> -->
+
+
+
+<div>
+    <fusioncharts
+    [chartConfig]=chartConfig
+    [dataSource]=dataSource >
+</fusioncharts>
+
+<fusioncharts
+    [chartConfig]=chartConfig_red
+    [dataSource]=dataSource_red >
+</fusioncharts>
+<fusioncharts
+    [chartConfig]=chartConfig_green
+    [dataSource]=dataSource_green >
+</fusioncharts>
+<fusioncharts
+    [chartConfig]=chartConfig_blue
+    [dataSource]=dataSource_blue >
+</fusioncharts>
+</div>

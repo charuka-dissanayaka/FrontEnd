@@ -1,0 +1,34 @@
+<p>
+  logout works!
+</p>
+
+
+         
+  <div  *ngIf="logInvalid"
+          class="alert alert-danger">Incorrect username or password</div>
+
+        <img class="mb-4" src="../../assets/brand.png" alt="" width="72" height="72">
+
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label class="sr-only">Email address</label>
+        <input [style] formControlName="email" class="form-control" placeholder="Email" type="email" [pattern]="emailRegex" required
+        ><br>
+
+        <div *ngIf="email.touched && email.invalid">
+          <div *ngIf="email.errors.required">
+            <p style="color:red">Please enter email...!</p>
+          </div>
+          <div *ngIf="email.errors.email">
+            <p style="color:red">Please insert valid email</p>
+          </div>
+        </div>
+
+        <label class="sr-only">Password</label>
+        <input formControlName="password" class="form-control" placeholder="Password" type="password" required minlength="8">
+
+        <div *ngIf="password.touched && password.invalid">
+          <div *ngIf="password.errors.required">
+            <p style="color:red">Password must be included!</p>
+          </div>
+        </div>

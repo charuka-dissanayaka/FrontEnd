@@ -1,0 +1,106 @@
+
+<div class="body">
+<div class="container registerContainer">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 registerForm">
+
+      <div *ngIf="has" class="alert alert-danger">
+        Email already exist
+      </div>
+      <div *ngIf="regErr" class="alert alert-danger">
+        Error Occured
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="text-white">
+
+        <img class="mb-4" src="../../assets/brand.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+
+        <label for="firstname" class="sr-only">First Name</label>
+        <input formControlName="firstname" placeholder="First Name" class="form-control"><br>
+
+        <div *ngIf="firstname.touched && firstname.invalid">
+          <div *ngIf="firstname.errors.required">
+            <p style="color:red">First name must be included!</p>
+          </div>
+          <div *ngIf="firstname.errors.realName">
+            <p style="color:red">Please enter a valid name!</p>
+          </div>
+        </div>
+
+        <label class="sr-only">Last Name</label>
+        <input formControlName="lastname" placeholder="Last Name" class="form-control" type="text"><br>
+
+        <div *ngIf="lastname.touched && lastname.invalid">
+          <div *ngIf="lastname.errors.required">
+            <p style="color:red">Last name must be included!</p>
+          </div>
+        </div>
+
+        <label class="sr-only">Email address</label>
+        <input formControlName="email" placeholder="Email" class="form-control" type="email"><br>
+
+        <div *ngIf="email.touched && email.invalid">
+          <div *ngIf="email.errors.required">
+            <p style="color:red">Email must be included!</p>
+          </div>
+          <div *ngIf="email.errors.email">
+            <p style="color:red">Invalid Email type</p>
+          </div>
+        </div>
+
+        <label class="sr-only">Password</label>
+        <input formControlName="password" placeholder="Password" class="form-control" type="password">
+
+        <div *ngIf="password.touched && password.invalid">
+          <div *ngIf="password.errors.required">
+            <p style="color:red">Password must be included!</p>
+          </div>
+          <div *ngIf="password.errors.minlength">
+            <p style="color:red">Password too short!</p>
+          </div>
+        </div>
+<br>
+        <label class="sr-only">Password</label>
+        <input formControlName="confirmPassword" placeholder="Confirm Password" class="form-control" type="password">
+
+        <div *ngIf="confirmPassword.touched && confirmPassword.invalid">
+          <div *ngIf="confirmPassword.errors.required">
+            <p style="color:red">Password must be included!</p>
+          </div>
+          <div *ngIf="confirmPassword.errors.MatchPassword">
+            <p style="color:red">Password not match!</p>
+          </div>
+        </div>
+        
+        <label class="sr-only" >comanyId</label>
+        <input formControlName="companyId" placeholder="company ID" class="form-control" type="companyId">
+         <div *ngIf="comanyId">
+          
+        </div>
+        <div class="">
+          <p style="color:red">company id should </p>
+        </div>
+
+        <div class="radio" class="text-white">
+          <label style="margin:10px;" >
+            <input formControlName="role" required type="radio" name="role" value="QC" (click)="toggle1()" (change)="userChange($event)" class="text-white"> Qyality Checker
+          </label>
+          
+          <label style="margin:10px;" >
+            <input formControlName="role" type="radio" name="role" value="Manager1" (click)="toggle2()" (change)="userChange($event)" > Manager
+          </label>
+        </div>
+        <input type="number" ng-model="theValue" placeholder="Raw Id" name="Raw id" min="0" max="100" required [disabled]="textBoxDisabled" />
+        
+        <br>
+        <p>Already registerd?<a routerLink="/login">Log in</a></p>
+
+        <button class="btn btn-pink btn-block btn-lg" type="submit">Register</button>
+      </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+</div>
