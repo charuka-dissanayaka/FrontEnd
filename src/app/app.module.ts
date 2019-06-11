@@ -52,6 +52,8 @@ import { CreateNewComponent } from './create-new/create-new.component';
 import { SubmitComponent } from './submit/submit.component';
 
 import { ManagerEditProfileComponent } from './manager-edit-profile/manager-edit-profile.component';
+import { ManagerSettingComponent } from './manager-setting/manager-setting.component';
+import { QcSettingComponent } from './qc-setting/qc-setting.component';
 // import { CreateNewComponent } from './create-new/create-new.component';
 // Use fcRoot function to inject FusionCharts library, and the modules you want to use
 FusionChartsModule.fcRoot(FusionCharts, Charts)
@@ -94,6 +96,10 @@ FusionChartsModule.fcRoot(FusionCharts, Charts)
     SubmitComponent,
  
     ManagerEditProfileComponent,
+ 
+    ManagerSettingComponent,
+ 
+    QcSettingComponent,
     
   
    

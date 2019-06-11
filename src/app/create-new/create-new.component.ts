@@ -22,7 +22,7 @@ export class CreateNewComponent implements OnInit {
       const data = res.json()
       this.image = data.imageUrl;
     })
-    // this.image = '../../assets/brand2.png';
+     this.image = '../../assets/brand2.png';
   }
 
   point_it(event) {
@@ -91,7 +91,7 @@ export class CreateNewComponent implements OnInit {
 
         point_blue.css({
           left: arr.x + 'px',
-          top: arr.y + 50+'px',
+          top: arr.y + 148+'px',
         });
         point_blue.text(arr.count);
         point_blue.appendTo(map_);
@@ -101,7 +101,7 @@ export class CreateNewComponent implements OnInit {
 
         point_green.css({
           left: arr.x  + 'px',
-          top: arr.y+50  + 'px',
+          top: arr.y+148  + 'px',
         });
         point_green.text(arr.count);
         point_green.appendTo(map_);
@@ -110,7 +110,7 @@ export class CreateNewComponent implements OnInit {
 
         point_red.css({
           left: arr.x  + 'px',
-          top: arr.y+50  + 'px',
+          top: arr.y+148  + 'px',
         });
         point_red.text(arr.count);
         point_red.appendTo(map_);

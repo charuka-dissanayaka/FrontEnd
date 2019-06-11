@@ -2,3 +2,8 @@
     border: 1cm;
     background-color: rgb(197, 189, 189);
 }
+.centered {
+    position: absolute;
+    top:150px;
+    left: 50%;
+  }

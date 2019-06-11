@@ -1,7 +1,7 @@
 <app-nav-bar></app-nav-bar>
 
-<div body
-<div *ngFor = "let alert of alertmessages"> 
+
+<div body *ngFor = "let alert of alertmessages"> 
   <p>{{alert.reason}}</p>
   <p>{{alert.createdDate | date:format}}</p>
 
@@ -30,8 +30,8 @@
 
       <!-- <div class="glyphicon glyphicon-remove"></div> <button (click) = "deleteAlert(alert)"  >Delete</button> -->
 
-  <!-- </div> -->
-</div>
+  </div>
+
 <button (click) = "createNew()" ><button type="button" class="btn btn-primary">View New Object</button></button>
 
 <div *ngFor = "let task of tasks" >

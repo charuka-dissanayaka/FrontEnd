@@ -1,0 +1,53 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div a class="row">
+    <div class="col-md-8 mr-auto ml-auto">
+      <div class="card">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <label class="sr-only">Current Password</label>
+  <input formControlName="password" class="form-control" placeholder=" Current Password" type="password" required minlength="8">
+
+  <div *ngIf="password.touched && password.invalid">
+    <div *ngIf="f.password.errors.required">
+      <p style="color:red">Password must be included!</p>
+    </div>
+    <div *ngIf="password.errors.minlength">
+      <p style="color:red">Password must be 8 characters!</p>
+    </div>
+  </div>
+  <br>
+
+  <label class="sr-only">New Password</label>
+  <input formControlName="password" class="form-control" placeholder=" New Password" type="password" required minlength="8">
+
+  <div *ngIf="password.touched && password.invalid">
+    <div *ngIf="f.password.errors.required">
+      <p style="color:red">Password must be included!</p>
+    </div>
+    <div *ngIf="password.errors.minlength">
+      <p style="color:red">Password must be 8 characters!</p>
+    </div>
+  </div>
+<br>
+  <label class="sr-only">Conform Password</label>
+  <input formControlName="password" class="form-control" placeholder=" conform Password" type="password" required minlength="8">
+
+  <div *ngIf="password.touched && password.invalid">
+    <div *ngIf="f.password.errors.required">
+      <p style="color:red">Password must be included!</p>
+    </div>
+    <div *ngIf="password.errors.minlength">
+      <p style="color:red">Password must be 8 characters!</p>
+    </div>
+  </div>
+  <br>
+  <br>
+<div class="form-group">
+<button class="btn btn-primary"  type="submit">UPDATE</button>
+</div>
+</form>
+</div>
+</div>
+

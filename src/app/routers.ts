@@ -63,11 +63,11 @@ export const appRoutes: Routes = [
           component:LogoutComponent,
       },
       {
-        path: '\qlist',
+        path: 'qlist',
         component: QclistComponent
       }, 
       {
-        path: '\intimate-list',
+        path: 'intimate-list',
         component: IntimateListComponent
       },
       {
@@ -75,13 +75,14 @@ export const appRoutes: Routes = [
         component: IntimateViewComponent
       }, 
       {
-        path: '\create-new',
+        path: 'create-new',
         component: CreateNewComponent
       }, 
       {
-        path: '\submit',
+        path: 'submit',
         component: SubmitComponent
-      }
+      },
+      
     
 
         

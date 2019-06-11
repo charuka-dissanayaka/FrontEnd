@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
           console.log(this.decoded);
           this.jsn =  JSON.parse(this.decoded);
           console.log("jsn obj "+this.jsn);
-          if(this.jsn.user.role  == "qualityChecker"){
+          if(this.jsn.user.role  == "Quality Checker"){
               this.router.navigate(['intimate']);
           }
           else{
